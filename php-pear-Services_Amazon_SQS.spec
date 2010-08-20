@@ -22,7 +22,6 @@ Requires:	php-pear
 Requires:	php-pear-Console_Getopt
 Requires:	php-pear-Crypt_HMAC2 >= 0.2.1
 Requires:	php-pear-HTTP_Request2 >= 0.1.0
-Requires:	php-pear-PEAR >= 1:1.7.0
 Requires:	php-pear-PEAR-core >= 1:1.7.2-9
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
