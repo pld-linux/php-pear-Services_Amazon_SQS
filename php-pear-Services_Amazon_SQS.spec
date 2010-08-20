@@ -8,12 +8,12 @@
 Summary:	PHP API and tools for Amazon SQS
 Summary(pl.UTF-8):	API PHP oraz narzędzia do obsługi Amazon SQS
 Name:		php-pear-%{_pearname}
-Version:	0.1.0
-Release:	3
+Version:	0.3.0
+Release:	1
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	56adf2ee5af123d1a0f9a3c6f74093a5
+# Source0-md5:	12ab27143e5681fc190252d9026cdc2b
 URL:		http://pear.php.net/package/Services_Amazon_SQS/
 BuildRequires:	php-pear-PEAR >= 1:1.7.2-9
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -22,9 +22,9 @@ Requires:	php-pear
 Requires:	php-pear-Console_Getopt
 Requires:	php-pear-Crypt_HMAC2 >= 0.2.1
 Requires:	php-pear-HTTP_Request2 >= 0.1.0
+Requires:	php-pear-PEAR >= 1:1.7.0
 Requires:	php-pear-PEAR-core >= 1:1.7.2-9
 BuildArch:	noarch
-Requires:	php-pear-PEAR >= 1:1.7.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir		%(pear config-get cfg_dir 2>/dev/null || ERROR)/%{_pearname}
