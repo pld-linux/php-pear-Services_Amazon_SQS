@@ -3,13 +3,13 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		Services
 %define		_subclass	Amazon_SQS
-%define		_status		alpha
+%define		_status		beta
 %define		_pearname	Services_Amazon_SQS
 Summary:	PHP API and tools for Amazon SQS
 Summary(pl.UTF-8):	API PHP oraz narzędzia do obsługi Amazon SQS
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -19,9 +19,11 @@ BuildRequires:	php-pear-PEAR >= 1:1.7.2-9
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
+Requires:	php-pear-Console_CommandLine >= 1.1.0
 Requires:	php-pear-Console_Getopt
 Requires:	php-pear-Crypt_HMAC2 >= 0.2.1
 Requires:	php-pear-HTTP_Request2 >= 0.1.0
+Requires:	php-pear-Net_URL2 >= 0.2.0
 Requires:	php-pear-PEAR-core >= 1:1.7.2-9
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
