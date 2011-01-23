@@ -25,6 +25,7 @@ Requires:	php-pear-Crypt_HMAC2 >= 0.2.1
 Requires:	php-pear-HTTP_Request2 >= 0.1.0
 Requires:	php-pear-Net_URL2 >= 0.2.0
 Requires:	php-pear-PEAR-core >= 1:1.7.2-9
+Obsoletes:	php-pear-Services_Amazon_SQS-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -47,20 +48,6 @@ zestaw kluczy z Amazon Web Services umożliwiających dostęp do usługi
 SQS.
 
 a klasa ma w PEAR status: %{_status}.
-
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
@@ -91,7 +78,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_sysconfdir}
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/sqs.ini
 %attr(755,root,root) %{_bindir}/sqs
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/%{_pearname}
