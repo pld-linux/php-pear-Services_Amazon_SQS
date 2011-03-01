@@ -9,7 +9,7 @@ Summary:	PHP API and tools for Amazon SQS
 Summary(pl.UTF-8):	API PHP oraz narzędzia do obsługi Amazon SQS
 Name:		php-pear-%{_pearname}
 Version:	0.3.0
-Release:	2
+Release:	3
 License:	Apache v2.0
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
