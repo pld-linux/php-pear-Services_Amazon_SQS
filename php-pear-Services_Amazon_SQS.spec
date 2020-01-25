@@ -1,6 +1,5 @@
 # TODO
 # - -cli subpackage for CLI tools (bin+config)?
-%include	/usr/lib/rpm/macros.php
 %define		_class		Services
 %define		_subclass	Amazon_SQS
 %define		_status		beta
